@@ -6,12 +6,12 @@ import org.usfirst.frc.team1339.utils.Constants;
 
 import edu.wpi.first.wpilibj.Joystick;
 
-public class ArcadeDrive extends CommandBase{
+public class ExampleCommand extends CommandBase{
 	
 	double throttle, turn;
 	Joystick stick;
 	
-	public ArcadeDrive(){
+	public ExampleCommand(){
 		requires(Robot.chassis);
 	}
 	

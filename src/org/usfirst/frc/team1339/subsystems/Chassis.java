@@ -3,7 +3,7 @@ package org.usfirst.frc.team1339.subsystems;
 import java.util.ArrayList;
 
 import org.usfirst.frc.team1339.base.SubsystemBase;
-import org.usfirst.frc.team1339.commands.ArcadeDrive;
+import org.usfirst.frc.team1339.commands.ExampleCommand;
 import org.usfirst.frc.team1339.robot.Robot;
 import org.usfirst.frc.team1339.utils.Constants;
 
@@ -31,7 +31,7 @@ public class Chassis extends SubsystemBase{
 	}
 	
 	public void initDefaultCommand(){
-		setDefaultCommand(new ArcadeDrive());
+		setDefaultCommand(new ExampleCommand());
 	}
 	
 	public void driveWithJoystick(double throttle, double turn){

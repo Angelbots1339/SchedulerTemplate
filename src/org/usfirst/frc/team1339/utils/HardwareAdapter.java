@@ -1,7 +1,8 @@
 package org.usfirst.frc.team1339.utils;
 
-import org.usfirst.frc.team1339.auto.commandgroups.CommandGroupTest;
-import org.usfirst.frc.team1339.commands.*;
+import org.usfirst.frc.team1339.commands.ExampleCommand;
+import org.usfirst.frc.team1339.commands.MotionProfileTest;
+import org.usfirst.frc.team1339.commands.TankDrive;
 
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 import edu.wpi.first.wpilibj.Encoder;
@@ -76,8 +77,8 @@ public class HardwareAdapter{
 	}
 	
 	public void checkTriggers(){
-		XButton.whenPressed(new CommandGroupTest());
-		AButton.toggle(new TankDrive(), new ArcadeDrive());
+		XButton.whenPressed(new MotionProfileTest(4000));
+		AButton.toggle(new TankDrive(), new ExampleCommand());
 	}
 	
 	//Joystick get methods
