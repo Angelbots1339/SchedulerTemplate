@@ -1,18 +1,16 @@
 package org.usfirst.frc.team1339.commands;
 
 import org.usfirst.frc.team1339.base.CommandBase;
-import org.usfirst.frc.team1339.robot.Robot;
-import org.usfirst.frc.team1339.utils.Constants;
-
-import edu.wpi.first.wpilibj.Joystick;
 
 public class ExampleCommand extends CommandBase{
 	
-	double throttle, turn;
-	Joystick stick;
-	
 	public ExampleCommand(){
-		requires(Robot.chassis);
+		/*
+		 * This is where you would put requires(), setRunSpeed(), and setTimeout(). eg:
+		 * requires(Robot.Chassis);
+		 * setRunSpeed(0.05);
+		 * setTimeout(5);
+		 */
 	}
 	
 	protected void init(){
@@ -20,11 +18,7 @@ public class ExampleCommand extends CommandBase{
 	}
 	
 	public void execute(){
-		stick = Robot.HardwareAdapter.getXboxStick();
-		throttle = stick.getRawAxis(Constants.xboxLeftYAxis);
-		turn = stick.getRawAxis(Constants.xboxRightXAxis);
 		
-		Robot.chassis.driveWithJoystick(throttle, turn);
 	}
 	
 	public boolean isFinished(){

@@ -20,7 +20,16 @@ public class ExampleCommandGroup extends CommandGroupBase{
 		 * This starts to run the command, and then the command after it will immediately
 		 * start to run, regardless of whether this command has finished or not.
 		 * 
-		 * You can also add
+		 * You can also add an interrupter, which will end a command based on an AngelButton,
+		 * regardless of if it has finished or not. You give it a line number, starting at 0, 
+		 * an AngelButton, and optionally, a value for the AngelButton to be at for the command
+		 * to end. Use addInterrupter(), eg:
+		 * addInterrupter(0, Robot.HardwareAdapter.getAButton());
+		 * or
+		 * addInterrupter(2, Robot.HardwareAdapter.getXButton(), false);
+		 * 
+		 * In the first example, the very first command will end when the A button returns true.
+		 * In the second example, the third command will end when the X button returns false.
 		 */
 	}
 }

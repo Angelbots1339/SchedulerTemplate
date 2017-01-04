@@ -1,16 +1,10 @@
 package org.usfirst.frc.team1339.robot;
 
-import org.usfirst.frc.team1339.auto.commandgroups.ExampleCommandGroup;
 import org.usfirst.frc.team1339.base.CommandBase;
 import org.usfirst.frc.team1339.utils.Looper;
 
 /**
  * This is the class for autonomous robot control.
- * <p>
- * *insert autonomous routines here*
- * <p>
- * $
- * <br>
  * @author Sam Schwartz
  * @author Nate Howard
  * @author Sam Korman
@@ -26,11 +20,12 @@ public class Autonomous {
 	}
 	
 	public void init(){
-		autoCommand = new ExampleCommandGroup();
+		/*
+		 * If you have an autonomous command, here is where you would set it. eg:
+		 * autoCommand = new DriveStraight(0.5, 3);
+		 */
 		Looper.getInstance().setInitDefaults();
 		if(autoCommand != null) Looper.getInstance().newCommand(autoCommand);
-		Robot.HardwareAdapter.kLeftDriveEncoder.reset();
-		Robot.HardwareAdapter.kRightDriveEncoder.reset();
 	}
 	
 	public void autonomousPeriodic(){
